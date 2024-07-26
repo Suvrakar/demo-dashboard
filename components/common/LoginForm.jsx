@@ -1,14 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { signIn } from "../../app/auth"; // Adjust the path if necessary
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const email = event.target.email.value;
+  const password = event.target.password.value;
+
+  try {
+    const result = await signIn(email, password);
+    console.log('Sign in successful:', result);
+    // Handle successful sign-in (e.g., save tokens, redirect user)
+  } catch (error) {
+    console.error('Error signing in:', error);
+    // Handle sign-in error (e.g., show error message to the user)
+  }
+};
+
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle form submission
-  };
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
@@ -24,7 +36,7 @@ const LoginForm = () => {
         <div className="col-12">
           <div className="input-group-meta mb-30">
             <label>Email</label>
-            <input type="email" placeholder="hasan@gmail.com" required />
+            <input type="email" name="email" placeholder="hasan@gmail.com" required />
           </div>
         </div>
         {/* End .col-12 */}
@@ -34,20 +46,17 @@ const LoginForm = () => {
             <label>Password</label>
             <input
               type={showPassword ? "text" : "password"}
+              name="password"
               placeholder="Enter Password"
               className="pass_log_id"
               required
             />
             <span className="placeholder_icon" onClick={handleTogglePassword}>
-              <span className=" d-flex align-items-center">
+              <span className="d-flex align-items-center">
                 {showPassword ? (
-                  <>
-                    <i className="fa-regular fa-eye"></i>
-                  </>
+                  <i className="fa-regular fa-eye"></i>
                 ) : (
-                  <>
-                    <i className=" fa-regular fa-eye-slash"></i>
-                  </>
+                  <i className="fa-regular fa-eye-slash"></i>
                 )}
               </span>
             </span>

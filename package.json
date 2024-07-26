@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.616.0",
     "@popperjs/core": "^2.11.6",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
