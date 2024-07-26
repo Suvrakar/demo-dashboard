@@ -42,12 +42,12 @@ const Header = () => {
             </Link>
           </div>
           <div className="right-widget ms-auto d-flex align-items-center order-lg-3">
-            <Link
-              href="/login"
+            {/* <Link
+              href="https://test-dem.auth.eu-north-1.amazoncognito.com/oauth2/authorize?client_id=2fc4rdgddt8i7abcdniv673ipe&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fjano-dashboard.onrender.com%2Fhome%2Fsass-product"
               className="login-btn-one fs-17 fw-500 tran3s me-3"
             >
               Login
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="contact-btn-two fs-17 fw-500 tran3s d-none d-lg-block"

@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <div className="right-widget ms-auto d-flex align-items-center order-lg-3">
             <Link
-              href="/login"
+              href="https://test-dem.auth.eu-north-1.amazoncognito.com/oauth2/authorize?client_id=2fc4rdgddt8i7abcdniv673ipe&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fjano-dashboard.onrender.com%2Fhome%2Fsass-product"
               className="login-btn-two fw-500 d-flex align-items-center me-3"
             >
               Login

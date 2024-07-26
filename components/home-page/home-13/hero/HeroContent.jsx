@@ -24,7 +24,7 @@ const HeroContent = () => {
           <img src="/images/icon/icon_91.svg" alt="img" className="ms-3" />
         </Link>
         <div className="mb-25 text-white signIn-btn">
-          Already using jano? <Link href="/login">Sign in</Link>
+          Already using jano? <Link href="https://test-dem.auth.eu-north-1.amazoncognito.com/oauth2/authorize?client_id=2fc4rdgddt8i7abcdniv673ipe&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fjano-dashboard.onrender.com%2Fhome%2Fsass-product">Sign in</Link>
         </div>
       </div>
       <h2 className="fw-normal text-white mt-60 mb-5 lg-mt-40">A+ Rating</h2>

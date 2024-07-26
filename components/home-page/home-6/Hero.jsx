@@ -41,7 +41,7 @@ const Hero = () => {
                   alt="shape"
                   className="lazy-img shapes line-shape"
                 />
-                Create your
+                Welcone! Create your
                 <span className="position-relative d-inline-block">
                   workspace
                 </span>
